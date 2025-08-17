@@ -1,4 +1,4 @@
-# Yudhnaa's Portfolio Website
+# Hoang Anh Duy's Portfolio Website
 
 A professional portfolio website built with modern HTML5, CSS3, and JavaScript. This website showcases my skills, projects, and provides a way to get in touch.
 
@@ -49,4 +49,4 @@ A professional portfolio website built with modern HTML5, CSS3, and JavaScript. 
 
 ## 📄 License
 
-© 2024 Yudhnaa. All rights reserved.
+© 2024 Hoang Anh Duy. All rights reserved.

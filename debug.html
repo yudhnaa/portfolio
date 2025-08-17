@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Debug Portfolio Scroll</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+			}
+			.debug-panel {
+				position: fixed;
+				top: 10px;
+				right: 10px;
+				background: rgba(0, 0, 0, 0.8);
+				color: white;
+				padding: 15px;
+				border-radius: 5px;
+				z-index: 9999;
+				font-size: 12px;
+				min-width: 250px;
+			}
+			.debug-panel h4 {
+				margin: 0 0 10px 0;
+			}
+			.debug-panel p {
+				margin: 5px 0;
+			}
+			.current-section {
+				color: #4caf50;
+				font-weight: bold;
+			}
+			iframe {
+				width: 100%;
+				height: calc(100vh - 20px);
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="debug-panel">
+			<h4>Scroll Debug Info</h4>
+			<p>Scroll Y: <span id="scrollY">0</span></p>
+			<p>
+				Current Section:
+				<span id="currentSection" class="current-section">none</span>
+			</p>
+			<div id="sectionsInfo"></div>
+		</div>
+
+		<iframe src="index.html" id="portfolioFrame"></iframe>
+
+		<script>
+			const iframe = document.getElementById("portfolioFrame");
+			const scrollYEl = document.getElementById("scrollY");
+			const currentSectionEl = document.getElementById("currentSection");
+			const sectionsInfoEl = document.getElementById("sectionsInfo");
+
+			iframe.onload = function () {
+				const iframeWindow = iframe.contentWindow;
+				const iframeDoc = iframe.contentDocument;
+
+				function updateDebugInfo() {
+					const scrollY = iframeWindow.scrollY;
+					const sections = iframeDoc.querySelectorAll("section[id]");
+					const headerOffset = 70;
+
+					scrollYEl.textContent = Math.round(scrollY);
+
+					let currentSection = "";
+					let sectionsInfo = "";
+
+					sections.forEach((section, index) => {
+						const rect = section.getBoundingClientRect();
+						const sectionTop = rect.top + scrollY;
+						const sectionId = section.getAttribute("id");
+						const activationPoint = sectionTop - headerOffset;
+						const isActive = scrollY >= activationPoint;
+
+						if (isActive) {
+							currentSection = sectionId;
+						}
+
+						sectionsInfo += `<p style="color: ${isActive ? "#4CAF50" : "#ccc"}">
+                        ${sectionId}: top=${Math.round(
+							sectionTop
+						)}, activation=${Math.round(activationPoint)}
+                    </p>`;
+					});
+
+					currentSectionEl.textContent = currentSection || "none";
+					sectionsInfoEl.innerHTML = sectionsInfo;
+				}
+
+				iframeWindow.addEventListener("scroll", updateDebugInfo);
+				updateDebugInfo(); // Initial call
+			};
+		</script>
+	</body>
+</html>

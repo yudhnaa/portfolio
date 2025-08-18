@@ -13,8 +13,8 @@
 		/>
 		<meta name="author" content="Hoang Anh Duy" />
 		<title>Hoang Anh Duy - Computer Science Student & Software Developer</title>
-		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="icon" type="image/svg+xml" href="static/img/favicon.svg" />
+		<link rel="stylesheet" href="static/styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -122,9 +122,11 @@
 				</div>
 				<div class="hero-image">
 					<div class="profile-card">
-						<div class="profile-placeholder">
-							<i class="fas fa-user"></i>
-						</div>
+						<img
+							src="static/img/avatar.jpeg"
+							alt="Hoang Anh Duy"
+							class="profile-image"
+						/>
 					</div>
 				</div>
 			</div>
@@ -504,102 +506,70 @@
 					Let's connect! I'm actively seeking software engineering opportunities
 				</p>
 
-				<div class="contact-content">
-					<div class="contact-info">
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fas fa-map-marker-alt"></i>
-							</div>
-							<div class="contact-details">
-								<h3>Location</h3>
-								<p>Ho Chi Minh City, Vietnam</p>
-							</div>
+				<div class="contact-grid">
+					<div class="contact-card">
+						<div class="contact-card-icon">
+							<i class="fas fa-map-marker-alt"></i>
 						</div>
-
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fas fa-envelope"></i>
-							</div>
-							<div class="contact-details">
-								<h3>Email</h3>
-								<p>hoanganhduy.yudhna@gmail.com</p>
-							</div>
-						</div>
-
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fab fa-linkedin"></i>
-							</div>
-							<div class="contact-details">
-								<h3>LinkedIn</h3>
-								<p>linkedin.com/in/2004anhduy</p>
-							</div>
-						</div>
-
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fab fa-github"></i>
-							</div>
-							<div class="contact-details">
-								<h3>GitHub</h3>
-								<p>github.com/yudhnaa</p>
-							</div>
-						</div>
-
-						<div class="contact-item">
-							<div class="contact-icon">
-								<i class="fas fa-phone"></i>
-							</div>
-							<div class="contact-details">
-								<h3>Phone</h3>
-								<p>+84 344778045</p>
-							</div>
-						</div>
+						<h3>Location</h3>
+						<p>Ho Chi Minh City, Vietnam</p>
 					</div>
 
-					<div class="contact-form">
-						<form id="contactForm">
-							<div class="form-group">
-								<input
-									type="text"
-									id="name"
-									name="name"
-									placeholder="Your Name"
-									required
-								/>
-							</div>
-							<div class="form-group">
-								<input
-									type="email"
-									id="email"
-									name="email"
-									placeholder="Your Email"
-									required
-								/>
-							</div>
-							<div class="form-group">
-								<input
-									type="text"
-									id="subject"
-									name="subject"
-									placeholder="Subject"
-									required
-								/>
-							</div>
-							<div class="form-group">
-								<textarea
-									id="message"
-									name="message"
-									placeholder="Your Message"
-									rows="6"
-									required
-								></textarea>
-							</div>
-							<button type="submit" class="btn btn-primary">
-								Send Message
-							</button>
-						</form>
+					<div class="contact-card">
+						<div class="contact-card-icon">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<h3>Email</h3>
+						<a href="mailto:hoanganhduy.yudhna@gmail.com" class="contact-link">
+							hoanganhduy.yudhna@gmail.com
+						</a>
 					</div>
+
+					<div class="contact-card">
+						<div class="contact-card-icon">
+							<i class="fab fa-linkedin"></i>
+						</div>
+						<h3>LinkedIn</h3>
+						<a
+							href="https://linkedin.com/in/2004anhduy"
+							class="contact-link"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							linkedin.com/in/2004anhduy
+						</a>
+					</div>
+
+					<div class="contact-card">
+						<div class="contact-card-icon">
+							<i class="fab fa-github"></i>
+						</div>
+						<h3>GitHub</h3>
+						<a
+							href="https://github.com/yudhnaa"
+							class="contact-link"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							github.com/yudhnaa
+						</a>
+					</div>
+
+					<div class="contact-card">
+						<div class="contact-card-icon">
+							<i class="fas fa-phone"></i>
+						</div>
+						<h3>Phone</h3>
+						<a href="tel:+84344778045" class="contact-link"> +84 344778045 </a>
+					</div>
+				</div>
+
+				<div class="contact-cta">
+					<p>Interested in collaborating or have a question? Let’s connect.</p>
+					<a href="mailto:hoanganhduy.yudhna@gmail.com" class="btn btn-primary">
+						<i class="fas fa-paper-plane"></i>
+						Send me an email
+					</a>
 				</div>
 			</div>
 		</section>
@@ -642,6 +612,6 @@
 			</div>
 		</footer>
 
-		<script src="script.js"></script>
+		<script src="static/script.js"></script>
 	</body>
 </html>

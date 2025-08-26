@@ -88,4 +88,4 @@ Contributions are always welcome! If you have suggestions for improvements or fi
 
 ## License
 
-© 2024 Hoang Anh Duy. All rights reserved.
+© 2024 Hoang Anh Duy. All rights reserved. 

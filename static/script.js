@@ -26,27 +26,71 @@ tailwind.config = {
 
 document.addEventListener('DOMContentLoaded', function () {
 	const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-	const navMenu = document.querySelector('nav .hidden.md\\:flex');
+	const navMenu = document.querySelector('header nav');
 
 	if (mobileMenuBtn && navMenu) {
+		const mobileMenuClasses = [
+			'flex',
+			'flex-col',
+			'absolute',
+			'top-16',
+			'left-0',
+			'right-0',
+			'bg-white',
+			'dark:bg-background-dark',
+			'p-6',
+			'gap-4',
+			'border-b',
+			'border-slate-200',
+			'dark:border-slate-800'
+		];
+
+		const closeMobileMenu = () => {
+			navMenu.classList.add('hidden');
+			navMenu.classList.remove(...mobileMenuClasses);
+			mobileMenuBtn.setAttribute('aria-expanded', 'false');
+		};
+
+		const openMobileMenu = () => {
+			navMenu.classList.remove('hidden');
+			navMenu.classList.add(...mobileMenuClasses);
+			mobileMenuBtn.setAttribute('aria-expanded', 'true');
+		};
+
+		const isMenuOpen = () => !navMenu.classList.contains('hidden') && navMenu.classList.contains('absolute');
+
 		mobileMenuBtn.addEventListener('click', function () {
-			navMenu.classList.toggle('hidden');
-			navMenu.classList.toggle('flex');
-			navMenu.classList.toggle('flex-col');
-			navMenu.classList.toggle('absolute');
-			navMenu.classList.toggle('top-16');
-			navMenu.classList.toggle('left-0');
-			navMenu.classList.toggle('right-0');
-			navMenu.classList.toggle('bg-white');
-			navMenu.classList.toggle('dark:bg-background-dark');
-			navMenu.classList.toggle('p-6');
-			navMenu.classList.toggle('gap-4');
-			navMenu.classList.toggle('border-b');
-			navMenu.classList.toggle('border-slate-200');
+			if (isMenuOpen()) {
+				closeMobileMenu();
+			} else {
+				openMobileMenu();
+			}
 			window.umami?.track('mobile_menu_toggled', {
-				state: navMenu.classList.contains('hidden') ? 'closed' : 'open'
+				state: isMenuOpen() ? 'open' : 'closed'
 			});
 		});
+
+		navMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+			link.addEventListener('click', function () {
+				if (window.innerWidth < 768) {
+					closeMobileMenu();
+				}
+			});
+		});
+
+		window.addEventListener('resize', function () {
+			if (window.innerWidth >= 768) {
+				navMenu.classList.remove(...mobileMenuClasses);
+				navMenu.classList.remove('hidden');
+				mobileMenuBtn.setAttribute('aria-expanded', 'false');
+			} else if (!isMenuOpen()) {
+				closeMobileMenu();
+			}
+		});
+
+		if (window.innerWidth < 768) {
+			closeMobileMenu();
+		}
 	}
 
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -61,4 +105,40 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	});
+
+	const projectsScroller = document.getElementById('projectsScroller');
+	const projectsTrack = document.getElementById('projectsTrack');
+	const projectsScrollPrev = document.getElementById('projectsScrollPrev');
+	const projectsScrollNext = document.getElementById('projectsScrollNext');
+
+	if (projectsScroller && projectsTrack && projectsScrollPrev && projectsScrollNext) {
+		const getScrollStep = () => {
+			const firstProjectCard = projectsTrack.querySelector('div');
+			if (!firstProjectCard) {
+				return Math.max(320, projectsScroller.clientWidth * 0.85);
+			}
+			const trackStyle = window.getComputedStyle(projectsTrack);
+			const gap = parseFloat(trackStyle.columnGap || trackStyle.gap || '0');
+			return firstProjectCard.getBoundingClientRect().width + gap;
+		};
+
+		const updateProjectScrollButtons = () => {
+			const maxScrollLeft = projectsScroller.scrollWidth - projectsScroller.clientWidth;
+			projectsScrollPrev.disabled = projectsScroller.scrollLeft <= 8;
+			projectsScrollNext.disabled = projectsScroller.scrollLeft >= maxScrollLeft - 8;
+		};
+
+		const scrollProjects = (direction) => {
+			projectsScroller.scrollBy({
+				left: direction * getScrollStep(),
+				behavior: 'smooth'
+			});
+		};
+
+		projectsScrollPrev.addEventListener('click', () => scrollProjects(-1));
+		projectsScrollNext.addEventListener('click', () => scrollProjects(1));
+		projectsScroller.addEventListener('scroll', updateProjectScrollButtons, { passive: true });
+		window.addEventListener('resize', updateProjectScrollButtons);
+		updateProjectScrollButtons();
+	}
 });

@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			navMenu.classList.toggle('gap-4');
 			navMenu.classList.toggle('border-b');
 			navMenu.classList.toggle('border-slate-200');
+			window.umami?.track('mobile_menu_toggled', {
+				state: navMenu.classList.contains('hidden') ? 'closed' : 'open'
+			});
 		});
 	}
 

@@ -31,11 +31,12 @@ A professional portfolio website showcasing my journey as a Computer Science stu
 
 ## Sections
 
-- **🏠 Home**: Personal introduction and career objectives
-- **🎓 Experience**: Education background and relevant experience
-- **🚀 Projects**: Academic and personal coding projects
-- **🛠️ Skills**: Technical abilities with animated progress bars
-- **📧 Contact**: Professional contact information and inquiry form
+- **Home**: Personal introduction and career objectives
+- **Experience**: Education background and relevant experience
+- **Achievements**: Honors, awards, and certifications
+- **Projects**: Academic and personal coding projects
+- **Skills**: Technical abilities with animated progress bars
+- **Contact**: Professional contact information and inquiry form
 
 ## Technologies Used
 

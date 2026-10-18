@@ -296,15 +296,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			{ from: 'gateway', to: 'auth' },
 			{ from: 'gateway', to: 'spring' },
 			{ from: 'gateway', to: 'fastapi' },
+			{ from: 'auth', to: 'spring' },
 			{ from: 'spring', to: 'rabbitmq' },
+			{ from: 'rabbitmq', to: 'celery' },
 			{ from: 'spring', to: 'postgres' },
 			{ from: 'fastapi', to: 'rag' },
 			{ from: 'rag', to: 'celery' },
 			{ from: 'fastapi', to: 'postgres' },
-			{ from: 'gateway', to: 'center' },
-			{ from: 'spring', to: 'center' },
-			{ from: 'fastapi', to: 'center' },
-			{ from: 'postgres', to: 'center' }
+			{ from: 'celery', to: 'postgres' }
 		];
 
 		// Light packets travelling on links
@@ -348,8 +347,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			const cx = width / 2;
 			const cy = height / 2;
-			const rx = Math.min(width * 0.40, 155);
-			const ry = Math.min(height * 0.40, 125);
+			const rx = Math.min(width * 0.38, 170);
+			const ry = Math.min(height * 0.38, 160);
 
 			const isDark = document.documentElement.classList.contains('dark');
 			const baseLineColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.07)';

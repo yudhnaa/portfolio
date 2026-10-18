@@ -312,70 +312,18 @@
 									<span>Ho Chi Minh City, VN</span>
 								</div>
 							</div>
-							<!-- Right Column: Interactive System Topology Console -->
-							<div
-								class="relative w-full max-w-[420px] lg:max-w-[440px] flex flex-col items-center"
-							>
-								<!-- Atmospheric Glow behind Console -->
+							<div class="relative w-full max-w-[400px] lg:max-w-[420px]">
 								<div
-									class="absolute -inset-4 rounded-3xl bg-primary/15 blur-2xl -z-10"
+									class="absolute inset-0 bg-primary/20 dark:bg-primary/10 rounded-2xl rotate-3 scale-[1.02]"
 								></div>
 								<div
-									class="w-full rounded-3xl bg-white/80 dark:bg-surface-dark-card border border-slate-200/90 dark:border-white/10 shadow-2xl p-4 relative overflow-hidden backdrop-blur-xl craft-card"
+									class="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-200 shadow-2xl ring-1 ring-slate-900/5 dark:ring-white/10"
 								>
-									<!-- Console Header Bar -->
-									<div
-										class="flex items-center justify-between gap-2 pb-3 mb-2 border-b border-slate-200/60 dark:border-white/[0.08] font-mono text-[11px]"
-									>
-										<div class="flex items-center gap-2 shrink-0">
-											<span
-												class="w-2 h-2 rounded-full bg-emerald-400 beacon-dot"
-											></span>
-											<span class="text-slate-900 dark:text-white font-semibold"
-												>SYSTEM TOPOLOGY</span
-											>
-										</div>
-										<!-- Segmented Mode Switcher -->
-										<div
-											class="inline-grid seg mode"
-											role="radiogroup"
-											aria-label="Topology Filter"
-										>
-											<span
-												class="seg__ind"
-												id="segIndicator"
-												aria-hidden="true"
-											></span>
-											<button type="button" class="on" data-stack="all">
-												Tất cả
-											</button>
-											<button type="button" data-stack="java">Java</button>
-											<button type="button" data-stack="python">Python</button>
-										</div>
-									</div>
-
-									<!-- Interactive Canvas Container with Centered Avatar -->
-									<div
-										class="relative w-full h-[320px] sm:h-[340px] rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#08060b] border border-slate-200/60 dark:border-white/[0.04] flex items-center justify-center"
-									>
-										<!-- Dedicated Canvas -->
-										<canvas
-											id="meshCanvas"
-											class="absolute inset-0 w-full h-full cursor-crosshair"
-										></canvas>
-
-										<!-- Center Core Engineer Avatar Node -->
-										<div
-											class="relative z-10 w-20 h-20 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-primary via-blue-600 to-indigo-600 shadow-[0_0_24px_rgba(44,90,160,0.45)] group cursor-pointer"
-											title="Duy Hoang Anh · Core Engineer"
-										>
-											<img
-												src="static/img/avatar.jpeg"
-												alt="Duy Hoang Anh"
-												class="w-full h-full object-cover rounded-full"
-											/>
-										</div>
-									</div>
+									<img
+										alt="Portrait of Hoang Anh Duy"
+										class="w-full h-full object-cover"
+										src="static/img/avatar.jpeg"
+									/>
 								</div>
 							</div>
 						</div>
@@ -663,7 +611,7 @@
 					id="skills"
 				>
 					<div class="max-w-[960px] mx-auto">
-						<div class="text-center mb-12">
+						<div class="text-center mb-10">
 							<h2
 								class="font-display text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
 							>
@@ -675,130 +623,188 @@
 							</p>
 						</div>
 
-						<!-- Primary Stacks: Java & Python -->
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-							<!-- Java Backend Stack -->
-							<div
-								id="skill-card-java"
-								class="craft-card bg-background-light dark:bg-surface-dark-card p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between transition-all"
-							>
-								<div>
-									<div class="mb-4">
-										<h3
-											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2 font-mono"
-										>
-											<span class="material-symbols-outlined text-lg">dns</span>
-											Java Backend Stack
-										</h3>
+						<!-- Main Technical Ecosystem: Java & Python Stacks (Left) + System Architecture Graph (Right) -->
+						<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 items-stretch">
+							<!-- Left Column: Java & Python Stacks -->
+							<div class="flex flex-col gap-6">
+								<!-- Java Backend Stack -->
+								<div
+									id="skill-card-java"
+									class="craft-card bg-background-light dark:bg-surface-dark-card p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between transition-all flex-1"
+								>
+									<div>
+										<div class="mb-4">
+											<h3
+												class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2 font-mono"
+											>
+												<span class="material-symbols-outlined text-lg">dns</span>
+												Java Backend Stack
+											</h3>
+										</div>
+										<div class="flex flex-col gap-3">
+											<!-- Row 1: Language & Core Frameworks -->
+											<div class="flex flex-wrap items-center gap-2">
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+													>Java 21</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+													>Spring Ecosystem (Boot, Security, JPA)</span
+												>
+											</div>
+											<!-- Row 2: Secondary Frameworks, Messaging, Auth & Protocols -->
+											<div class="flex flex-wrap items-center gap-2">
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>RESTful APIs</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>RabbitMQ</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>RS256 JWT</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>Thymeleaf</span
+												>
+											</div>
+											<!-- Row 3: Databases -->
+											<div class="flex flex-wrap items-center gap-2">
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>PostgreSQL</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>MySQL</span
+												>
+											</div>
+										</div>
 									</div>
-									<div class="flex flex-col gap-3">
-										<!-- Row 1: Language & Core Frameworks -->
-										<div class="flex flex-wrap items-center gap-2">
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
-												>Java 21</span
+								</div>
+
+								<!-- Python & AI Stack -->
+								<div
+									id="skill-card-python"
+									class="craft-card bg-background-light dark:bg-surface-dark-card p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between transition-all flex-1"
+								>
+									<div>
+										<div class="mb-4">
+											<h3
+												class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2 font-mono"
 											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
-												>Spring Ecosystem (Boot, Security, JPA)</span
-											>
+												<span class="material-symbols-outlined text-lg"
+													>terminal</span
+												>
+												Python &amp; AI Stack
+											</h3>
 										</div>
-										<!-- Row 2: Secondary Frameworks, Messaging, Auth & Protocols -->
-										<div class="flex flex-wrap items-center gap-2">
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>RESTful APIs</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>RabbitMQ</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>RS256 JWT</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>Thymeleaf</span
-											>
-										</div>
-										<!-- Row 3: Databases -->
-										<div class="flex flex-wrap items-center gap-2">
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>PostgreSQL</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>MySQL</span
-											>
+										<div class="flex flex-col gap-3">
+											<!-- Row 1: Language & Core Frameworks -->
+											<div class="flex flex-wrap items-center gap-2">
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+													>Python</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+													>Django</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+													>FastAPI</span
+												>
+											</div>
+											<!-- Row 2: Secondary Frameworks, AI & Protocols -->
+											<div class="flex flex-wrap items-center gap-2">
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>RESTful APIs</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>RAG</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>LangChain</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>LangGraph</span
+												>
+											</div>
+											<!-- Row 3: Databases -->
+											<div class="flex flex-wrap items-center gap-2">
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>PostgreSQL</span
+												>
+												<span
+													class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
+													>MySQL</span
+												>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<!-- Python & AI Stack -->
-							<div
-								id="skill-card-python"
-								class="craft-card bg-background-light dark:bg-surface-dark-card p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between transition-all"
-							>
-								<div>
-									<div class="mb-4">
-										<h3
-											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2 font-mono"
+							<!-- Right Column: System Topology Visualizer -->
+							<div class="flex flex-col h-full">
+								<div
+									class="w-full h-full rounded-2xl bg-background-light dark:bg-surface-dark-card border border-slate-200/90 dark:border-white/10 shadow-sm p-4 sm:p-5 flex flex-col justify-between craft-card"
+								>
+									<!-- Console Header Bar -->
+									<div
+										class="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 pb-3 mb-3 border-b border-slate-200/60 dark:border-white/[0.08] font-mono text-xs"
+									>
+										<div class="flex items-center gap-2 shrink-0">
+											<span
+												class="w-2.5 h-2.5 rounded-full bg-emerald-400 beacon-dot"
+											></span>
+											<span
+												class="text-slate-900 dark:text-white font-semibold tracking-wide text-xs"
+												>SYSTEM TOPOLOGY</span
+											>
+										</div>
+
+										<!-- Segmented Mode Switcher -->
+										<div
+											class="inline-grid seg mode"
+											role="radiogroup"
+											aria-label="Topology Filter"
 										>
-											<span class="material-symbols-outlined text-lg"
-												>terminal</span
-											>
-											Python &amp; AI Stack
-										</h3>
+											<span
+												class="seg__ind"
+												id="segIndicator"
+												aria-hidden="true"
+											></span>
+											<button type="button" class="on" data-stack="all">
+												Tất cả
+											</button>
+											<button type="button" data-stack="java">
+												Java
+											</button>
+											<button type="button" data-stack="python">
+												Python
+											</button>
+										</div>
 									</div>
-									<div class="flex flex-col gap-3">
-										<!-- Row 1: Language & Core Frameworks -->
-										<div class="flex flex-wrap items-center gap-2">
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
-												>Python</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
-												>Django</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
-												>FastAPI</span
-											>
-										</div>
-										<!-- Row 2: Secondary Frameworks, AI & Protocols -->
-										<div class="flex flex-wrap items-center gap-2">
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>RESTful APIs</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>RAG</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>LangChain</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>LangGraph</span
-											>
-										</div>
-										<!-- Row 3: Databases -->
-										<div class="flex flex-wrap items-center gap-2">
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>PostgreSQL</span
-											>
-											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
-												>MySQL</span
-											>
-										</div>
+
+									<!-- Interactive Canvas Container -->
+									<div
+										class="relative w-full flex-grow min-h-[380px] rounded-xl overflow-hidden bg-white dark:bg-[#08060b] border border-slate-200/60 dark:border-white/[0.04]"
+									>
+										<!-- Dedicated Canvas -->
+										<canvas
+											id="meshCanvas"
+											class="absolute inset-0 w-full h-full cursor-crosshair"
+										></canvas>
 									</div>
 								</div>
 							</div>

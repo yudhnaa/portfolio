@@ -141,4 +141,35 @@ document.addEventListener('DOMContentLoaded', function () {
 		window.addEventListener('resize', updateProjectScrollButtons);
 		updateProjectScrollButtons();
 	}
+
+	// Resume dropdown toggle
+	const resumeDropdownBtn = document.getElementById('resumeDropdownBtn');
+	const resumeDropdownMenu = document.getElementById('resumeDropdownMenu');
+	const resumeDropdownArrow = document.getElementById('resumeDropdownArrow');
+
+	if (resumeDropdownBtn && resumeDropdownMenu) {
+		const toggleResumeDropdown = (forceState) => {
+			const shouldOpen = forceState !== undefined ? forceState : resumeDropdownMenu.classList.contains('hidden');
+			if (shouldOpen) {
+				resumeDropdownMenu.classList.remove('hidden');
+				resumeDropdownBtn.setAttribute('aria-expanded', 'true');
+				if (resumeDropdownArrow) resumeDropdownArrow.classList.add('rotate-180');
+			} else {
+				resumeDropdownMenu.classList.add('hidden');
+				resumeDropdownBtn.setAttribute('aria-expanded', 'false');
+				if (resumeDropdownArrow) resumeDropdownArrow.classList.remove('rotate-180');
+			}
+		};
+
+		resumeDropdownBtn.addEventListener('click', function (e) {
+			e.stopPropagation();
+			toggleResumeDropdown();
+		});
+
+		document.addEventListener('click', function (e) {
+			if (!resumeDropdownBtn.contains(e.target) && !resumeDropdownMenu.contains(e.target)) {
+				toggleResumeDropdown(false);
+			}
+		});
+	}
 });

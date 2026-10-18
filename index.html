@@ -3,16 +3,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-		<title>Hoang Anh Duy - Portfolio</title>
+		<title>
+			Duy Hoang Anh - Software Engineer | Backend &amp; Distributed Systems
+		</title>
 		<meta
 			name="description"
-			content="Hoang Anh Duy - Software Engineer Portfolio. Final-year Computer Science student specializing in fullstack development."
+			content="Computer Science graduate from Ho Chi Minh Open University, ranked top of the graduating class. Experienced in Java and Python backend development, authentication, payment workflows, async processing, RAG, and AI applications."
 		/>
 		<meta
 			name="keywords"
-			content="software engineer, fullstack developer, portfolio, web development, python, java, react"
+			content="software engineer, backend developer, python, java, spring boot, microservices, django, fastapi, celery, rabbitmq, postgresql, docker, portfolio"
 		/>
-		<meta name="author" content="Hoang Anh Duy" />
+		<meta name="author" content="Duy Hoang Anh" />
 		<link rel="icon" type="image/svg+xml" href="static/img/favicon.svg" />
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -69,15 +71,25 @@
 							>
 							<a
 								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								href="#skills"
+								>Skills</a
+							>
+							<a
+								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
 								href="#projects"
 								>Projects</a
 							>
-							</nav>
-							<div class="flex items-center gap-4">
-								<button
-									class="md:hidden text-slate-600 dark:text-slate-300"
-									id="mobileMenuBtn"
-									data-umami-event="mobile_menu_button_click"
+							<a
+								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								href="#contact"
+								>Contact</a
+							>
+						</nav>
+						<div class="flex items-center gap-4">
+							<button
+								class="md:hidden text-slate-600 dark:text-slate-300"
+								id="mobileMenuBtn"
+								data-umami-event="mobile_menu_button_click"
 							>
 								<span class="material-symbols-outlined">menu</span>
 							</button>
@@ -106,46 +118,117 @@
 									<h1
 										class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white leading-[1.15] tracking-tight"
 									>
-										Hi, I'm Hoang Anh Duy
+										Hi, I'm Duy
 									</h1>
-									<br
-										class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light"
+									<p
+										class="text-base lg:text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-justify"
 									>
-									Final-year Computer Science student at HCM City Open University.
-									I am passionate about building scalable, user-centric web applications 
-									with clean code and elegant design. 
-								</br>
-								<br
-										class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-light"
+										Computer Science graduate from Ho Chi Minh Open University,
+										<strong
+											class="font-semibold text-slate-800 dark:text-slate-200"
+											>ranked top of the graduating class</strong
+										>. Passionate about
+										<strong
+											class="font-semibold text-slate-800 dark:text-slate-200"
+											>backend development</strong
+										>, with hands-on experience building reliable systems and
+										AI-powered applications.
+									</p>
+									<p
+										class="text-base lg:text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-justify"
 									>
-									My goal is to grow into a skilled Software Engineer, contributing to 
-									high-impact projects in a professional environment.
-								</br>
+										Experienced in
+										<strong
+											class="font-semibold text-slate-800 dark:text-slate-200"
+											>Java</strong
+										>
+										and
+										<strong
+											class="font-semibold text-slate-800 dark:text-slate-200"
+											>Python</strong
+										>, working on authentication,
+										<strong
+											class="font-semibold text-slate-800 dark:text-slate-200"
+											>payment workflows</strong
+										>,
+										<strong
+											class="font-semibold text-slate-800 dark:text-slate-200"
+											>asynchronous processing</strong
+										>, data collection,
+										<strong
+											class="font-semibold text-slate-800 dark:text-slate-200"
+											>RAG</strong
+										>, and external API integration.
 									</p>
 								</div>
+								<div
+									class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2"
+								>
 									<div
-										class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2"
+										class="relative inline-block text-left"
+										id="resumeDropdownWrapper"
 									>
-										<a
-											class="flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40"
-											href="https://drive.google.com/file/d/1AXolONUb5bktEMMGZB1CWUdH4Snm4pLc/view"
-											target="_blank"
-											rel="noopener noreferrer"
-											data-umami-event="hero_resume_click"
+										<button
+											id="resumeDropdownBtn"
+											type="button"
+											class="flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40"
+											aria-expanded="false"
+											aria-haspopup="true"
 										>
-											Resume
-										</a>
-										<a
-											class="flex items-center justify-center h-12 px-6 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-base font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
-											href="#projects"
-											data-umami-event="hero_view_projects_click"
-										>
-											View Projects
-										</a>
-											</div>
+											<span>View Resume</span>
+											<span
+												class="material-symbols-outlined text-lg transition-transform duration-200"
+												id="resumeDropdownArrow"
+												>expand_more</span
+											>
+										</button>
 										<div
-											class="pt-4 flex items-center justify-center lg:justify-start gap-6 text-slate-500 dark:text-slate-400"
+											id="resumeDropdownMenu"
+											class="hidden absolute left-0 mt-2 w-64 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-xl z-30 py-2 divide-y divide-slate-100 dark:divide-slate-800"
 										>
+											<a
+												class="flex flex-col px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+												href="https://drive.google.com/file/d/1AXolONUb5bktEMMGZB1CWUdH4Snm4pLc/view"
+												target="_blank"
+												rel="noopener noreferrer"
+												data-umami-event="hero_resume_python_click"
+											>
+												<span
+													class="text-sm font-semibold text-slate-900 dark:text-white"
+													>Python Backend &amp; AI</span
+												>
+												<span class="text-xs text-slate-500 dark:text-slate-400"
+													>Django, FastAPI, Celery, LangChain</span
+												>
+											</a>
+											<a
+												class="flex flex-col px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+												href="https://drive.google.com/file/d/1AXolONUb5bktEMMGZB1CWUdH4Snm4pLc/view"
+												target="_blank"
+												rel="noopener noreferrer"
+												data-umami-event="hero_resume_java_click"
+											>
+												<span
+													class="text-sm font-semibold text-slate-900 dark:text-white"
+													>Java Backend &amp; Microservices</span
+												>
+												<span class="text-xs text-slate-500 dark:text-slate-400"
+													>Java 21, Spring Boot, RabbitMQ, SQL</span
+												>
+											</a>
+										</div>
+									</div>
+									<a
+										class="flex items-center justify-center h-12 px-6 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-base font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+										href="#projects"
+										data-umami-event="hero_view_projects_click"
+									>
+										View Projects
+									</a>
+								</div>
+								<div
+									class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-500 dark:text-slate-400"
+								>
 									<a
 										class="hover:text-primary transition-colors flex items-center gap-1"
 										href="https://linkedin.com/in/2004anhduy"
@@ -176,6 +259,14 @@
 										>
 										<span class="text-sm font-medium">Email</span>
 									</a>
+									<a
+										class="hover:text-primary transition-colors flex items-center gap-1"
+										href="tel:+84344778045"
+										data-umami-event="social_phone_click"
+									>
+										<span class="material-symbols-outlined text-2xl">call</span>
+										<span class="text-sm font-medium">+84 344 778 045</span>
+									</a>
 								</div>
 								<div
 									class="pt-2 flex items-center justify-center lg:justify-start gap-2 text-slate-600 dark:text-slate-400"
@@ -183,7 +274,7 @@
 									<span class="material-symbols-outlined text-[18px]"
 										>location_on</span
 									>
-									<span class="text-sm font-medium">Ho Chi Minh, Vietnam</span>
+									<span class="text-sm font-medium">Ho Chi Minh City, VN</span>
 								</div>
 							</div>
 							<div class="relative w-full max-w-[400px] lg:max-w-[420px]">
@@ -200,7 +291,6 @@
 									/>
 								</div>
 							</div>
-						</div>
 						</div>
 					</div>
 				</section>
@@ -246,35 +336,95 @@
 										>
 											Python Developer Intern
 										</h3>
+										<span
+											class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 w-fit"
+										>
+											Sep 2025 – Jan 2026
+										</span>
 									</div>
-									<p
-										class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-2"
-									>
-										Sep 2025 - Jan 2026
-									</p>
-									<p class="text-primary font-medium text-sm mb-3">
+									<p class="text-primary font-medium text-sm mb-4">
 										Golden Owl Solutions – Ho Chi Minh City, Vietnam
 									</p>
-									<ul
-										class="list-disc list-outside ml-4 space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed text-sm"
-									>
-										<li>
-											Developed REST APIs with Python, Django, Celery and
-											integrated Next.js frontend
-										</li>
-										<li>
-											Worked on SavvyRate (banking analytics) and GoReader (news
-											aggregation) projects
-										</li>
-										<li>
-											Migrated services from Go to Python, designed RSS modules,
-											enhanced UI components
-										</li>
-										<li>
-											Applied Agile/Scrum, GitFlow, Clean Code, and SOLID
-											principles
-										</li>
-									</ul>
+									<div class="space-y-4">
+										<div>
+											<h4
+												class="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-1"
+											>
+												Banking Interest Comparison Platform –
+												<span class="font-normal text-slate-500"
+													>Internal training project</span
+												>
+											</h4>
+											<ul
+												class="list-disc list-outside ml-4 space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed text-sm"
+											>
+												<li>
+													Independently engineered web services and REST APIs
+													using <strong>Python</strong> and
+													<strong>Django</strong> to monitor deposit rates
+													across ~12 Vietnamese commercial banks and recommend
+													optimal deposit terms.
+												</li>
+												<li>
+													Built automated scheduled
+													<strong>Celery</strong> background workers to collect
+													and normalize interest-rate data from diverse sources,
+													implementing retry policies and fallback mechanisms
+													when crawlers failed.
+												</li>
+												<li>
+													Architected an optimized
+													<strong>PostgreSQL</strong> relational schema for
+													banks, deposit tiers, and term-based rates with ~1
+													year of historical data.
+												</li>
+												<li>
+													Connected backend API services to the user interface
+													using <strong>Next.js</strong> and
+													<strong>TypeScript</strong>.
+												</li>
+											</ul>
+										</div>
+										<div>
+											<h4
+												class="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-1"
+											>
+												News Aggregation Platform –
+												<span class="font-normal text-slate-500"
+													>System maintenance &amp; feature development</span
+												>
+											</h4>
+											<ul
+												class="list-disc list-outside ml-4 space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed text-sm"
+											>
+												<li>
+													Maintained an automated news aggregation system
+													collecting articles from websites and RSS feeds to
+													generate AI-powered summaries and personalized daily
+													digests.
+												</li>
+												<li>
+													Reworked crawling infrastructure to handle dynamic DOM
+													shifts by utilizing LLMs to generate robust CSS
+													selectors, coupled with admin validation and fallback
+													logic.
+												</li>
+												<li>
+													Optimized the article summarization pipeline by
+													refining prompts, deploying lightweight models, and
+													utilizing polling mechanisms to reduce token
+													consumption and eliminate timeouts.
+												</li>
+												<li>
+													Added secure authentication options including
+													<strong>Sign in with Apple</strong>, built interactive
+													web features using
+													<strong>Next.js/TypeScript</strong>, and collaborated
+													via <strong>Agile/Scrum</strong>.
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -296,27 +446,36 @@
 										<h3
 											class="text-lg font-bold text-slate-900 dark:text-white"
 										>
-											Bachelor of Science in Computer Science
+											B.S. in Computer Science
 										</h3>
-										<span
-											class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300"
-										>
-											GPA: 3.8/4.0
-										</span>
+										<div class="flex flex-wrap items-center gap-2">
+											<span
+												class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300"
+											>
+												GPA: 3.81 / 4.0
+											</span>
+											<span
+												class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-300"
+											>
+												Top of Graduating Class
+											</span>
+										</div>
 									</div>
 									<p
 										class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-2"
 									>
-										Sep 2022 - Now
+										Sep 2022 – Sep 2026
 									</p>
 									<p class="text-primary font-medium text-sm mb-3">
-										Ho Chi Minh Open University, Ho Chi Minh, Vietnam
+										Ho Chi Minh Open University – Ho Chi Minh City, Vietnam
 									</p>
 									<p
 										class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"
 									>
-										Key academic honors and professional certifications are
-										highlighted in the section below.
+										Graduated ranked top of the graduating class in Computer
+										Science (2026). Recognized with 9 consecutive semesters of
+										Academic Excellence Scholarships and multi-year Outstanding
+										Student of the Year awards.
 									</p>
 								</div>
 							</div>
@@ -356,15 +515,29 @@
 								>
 									<li>
 										<span class="font-semibold text-primary"
-											>First Prize — Open-Source Software Solutions Competition
-											(University Level) for Macro Mate (2025)</span
+											>Top of Graduating Class – Computer Science (2026)</span
 										>
 									</li>
 									<li>
-										Academic Excellence Scholarship — 8 consecutive semesters
-										(2022–2025)
+										<span class="font-semibold text-primary"
+											>First Prize – Student Scientific Research Competition,
+											Medibot (2026)</span
+										>
 									</li>
-									<li>Outstanding Student of the Year Award 2024, 2025</li>
+									<li>
+										<span class="font-semibold text-primary"
+											>First Prize – Open-Source Software Solutions Competition,
+											University Level, Macro Mate (2025)</span
+										>
+									</li>
+									<li>
+										<strong>Outstanding Student of the Year Award</strong> —
+										2024, 2025, 2026
+									</li>
+									<li>
+										<strong>Academic Excellence Scholarship</strong> — 9
+										consecutive semesters (2022–2026)
+									</li>
 								</ul>
 							</div>
 							<div
@@ -384,10 +557,13 @@
 									<li>
 										<span class="font-semibold text-primary"
 											>TOEIC Listening &amp; Reading — 870/990 (L: 470, R: 400)
-											(2026)</span
+											(2025)</span
 										>
 									</li>
-									<li>Samsung Innovation Campus — Big Data Certificate</li>
+									<li>
+										<strong>Samsung Innovation Campus</strong> — Big Data
+										Certificate (2024)
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -395,81 +571,269 @@
 				</section>
 
 				<!-- Technical Proficiency Section -->
-				<section class="w-full py-16 px-6 bg-white dark:bg-surface-dark">
-					<div class="max-w-[960px] mx-auto text-center">
-						<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8">
-							Technical Proficiency
-						</h2>
-						<div class="flex flex-wrap justify-center gap-3">
-							<!-- Backend -->
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Python</span
+				<section
+					class="w-full py-16 px-6 bg-white dark:bg-surface-dark"
+					id="skills"
+				>
+					<div class="max-w-[960px] mx-auto">
+						<div class="text-center mb-12">
+							<h2
+								class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
 							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Java</span
+								Technical Proficiency
+							</h2>
+							<p class="mt-2 text-slate-600 dark:text-slate-400">
+								Core backend ecosystems, distributed systems, and modern AI
+								engineering.
+							</p>
+						</div>
+
+						<!-- Primary Stacks: Java & Python -->
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+							<!-- Java Backend Stack -->
+							<div
+								class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between"
 							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Django</span
+								<div>
+									<div class="mb-4">
+										<h3
+											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2"
+										>
+											<span class="material-symbols-outlined text-lg">dns</span>
+											Java Backend Stack
+										</h3>
+									</div>
+									<div class="flex flex-col gap-3">
+										<!-- Row 1: Language & Core Frameworks -->
+										<div class="flex flex-wrap items-center gap-2">
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												>Java 21</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												>Spring Ecosystem (Boot, Security, JPA)</span
+											>
+										</div>
+										<!-- Row 2: Secondary Frameworks, Messaging, Auth & Protocols -->
+										<div class="flex flex-wrap items-center gap-2">
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>RESTful APIs</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>RabbitMQ</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>RS256 JWT</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>Thymeleaf</span
+											>
+										</div>
+										<!-- Row 3: Databases -->
+										<div class="flex flex-wrap items-center gap-2">
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>PostgreSQL</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>MySQL</span
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Python & AI Stack -->
+							<div
+								class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between"
 							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>FastAPI</span
+								<div>
+									<div class="mb-4">
+										<h3
+											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2"
+										>
+											<span class="material-symbols-outlined text-lg"
+												>terminal</span
+											>
+											Python &amp; AI Stack
+										</h3>
+									</div>
+									<div class="flex flex-col gap-3">
+										<!-- Row 1: Language & Core Frameworks -->
+										<div class="flex flex-wrap items-center gap-2">
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												>Python</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												>Django</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												>FastAPI</span
+											>
+										</div>
+										<!-- Row 2: Secondary Frameworks, AI & Protocols -->
+										<div class="flex flex-wrap items-center gap-2">
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>RESTful APIs</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>RAG</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>LangChain</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>LangGraph</span
+											>
+										</div>
+										<!-- Row 3: Databases -->
+										<div class="flex flex-wrap items-center gap-2">
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>PostgreSQL</span
+											>
+											<span
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												>MySQL</span
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Supporting Skills: DevOps, Frontend, Tools -->
+						<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+							<!-- DevOps, Cloud & OS -->
+							<div
+								class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm"
 							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Flask</span
-							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Spring MVC</span
-							>
-							<!-- Database -->
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>PostgreSQL</span
-							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>MongoDB</span
-							>
+								<h3
+									class="text-xs font-bold uppercase tracking-wider text-primary mb-4 flex items-center gap-2"
+								>
+									<span class="material-symbols-outlined text-lg"
+										>developer_board</span
+									>
+									DevOps &amp; OS
+								</h3>
+								<div class="flex flex-wrap gap-2">
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Docker</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Git</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>GitHub Actions</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Linux (Ubuntu)</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Bash</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>DigitalOcean</span
+									>
+								</div>
+							</div>
+
 							<!-- Frontend -->
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>React</span
+							<div
+								class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm"
 							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Next.js</span
+								<h3
+									class="text-xs font-bold uppercase tracking-wider text-primary mb-4 flex items-center gap-2"
+								>
+									<span class="material-symbols-outlined text-lg">web</span>
+									Frontend
+								</h3>
+								<div class="flex flex-wrap gap-2">
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Next.js</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>React</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>TypeScript</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>JavaScript</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Tailwind CSS</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>HTML/CSS</span
+									>
+								</div>
+							</div>
+
+							<!-- AI Tools & Workflow -->
+							<div
+								class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm"
 							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>React Native</span
-							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>TypeScript</span
-							>
-							<!-- AI/ML -->
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>LangChain</span
-							>
-							<!-- Tools -->
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Docker</span
-							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Firebase</span
-							>
-							<span
-								class="px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-medium"
-								>Git</span
-							>
+								<h3
+									class="text-xs font-bold uppercase tracking-wider text-primary mb-4 flex items-center gap-2"
+								>
+									<span class="material-symbols-outlined text-lg"
+										>psychology</span
+									>
+									AI Tools &amp; Practices
+								</h3>
+								<div class="flex flex-wrap gap-2">
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Claude Code</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Codex</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Agile/Scrum</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Problem-Solving</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Teamwork</span
+									>
+									<span
+										class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+										>Adaptability</span
+									>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -529,302 +893,582 @@
 								id="projectsScroller"
 							>
 								<div class="flex gap-6 w-max px-1" id="projectsTrack">
-								<!-- Project 1: Macro Mate -->
-								<div
-									class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-								>
+									<!-- Project 1: Personal Tracker (Flagship Microservices) -->
 									<div
-										class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
 									>
-										<span
-											class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
-											>nutrition</span
+										<a
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center block"
+											href="https://per-tracker.yudhna.id.vn/"
+											target="_blank"
+											rel="noopener noreferrer"
+											data-umami-event="project_live_click"
+											data-umami-event-project="personal-tracker"
 										>
-									</div>
-									<div class="p-6 flex flex-col flex-grow">
-										<div class="mb-3">
-											<div>
-												<h3 class="text-xl font-bold">
-													<a
-														class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
-														href="https://github.com/yudhnaa/macro-mate"
-														target="_blank"
-														rel="noopener noreferrer"
-														data-umami-event="project_repo_click"
-														data-umami-event-project="macro-mate"
+											<img
+												src="static/img/personal-tracker.png"
+												alt="Personal Tracker Preview"
+												class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+												loading="lazy"
+											/>
+										</a>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3 class="text-xl font-bold">
+														<a
+															class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
+															href="https://per-tracker.yudhna.id.vn/"
+															target="_blank"
+															rel="noopener noreferrer"
+															data-umami-event="project_live_click"
+															data-umami-event-project="personal-tracker"
+														>
+															Personal Tracker
+														</a>
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
 													>
-														Macro Mate
-													</a>
-												</h3>
-												<span class="text-xs text-emerald-600 font-semibold"
-													>First Prize - Open-Source Competition</span
+														<span class="text-xs text-primary font-semibold"
+															>Microservices Architecture</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/personal-tracker"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="personal-tracker-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/personal-tracker-backend"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="personal-tracker-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Distributed personal productivity backend built with
+												Java 21, Spring Boot, PostgreSQL, and RabbitMQ. Features
+												Transactional Outbox pattern for reliable asynchronous
+												messaging, RS256 JWT auth architecture with JWKS
+												verification, and a Java 2D dynamic wallpaper engine
+												with in-memory caching.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Java 21</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Spring Boot</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>RabbitMQ</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>PostgreSQL</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>RS256 JWT</span
 												>
 											</div>
 										</div>
-										<p
-											class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
-										>
-											AI-powered nutrition tracking platform with food image
-											recognition, macro/calorie tracking, AI-generated meal
-											plans, and personalized nutrition advice.
-										</p>
-										<div class="flex flex-wrap gap-2 mt-auto">
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>FastAPI</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>LangChain</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Next.js</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Gemini AI</span
-											>
-										</div>
 									</div>
-								</div>
 
-								<!-- Project 2: Open-Terra -->
-								<div
-									class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-								>
+									<!-- Project 2: Medibot (Flagship AI & Research 1st Prize) -->
 									<div
-										class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
 									>
-										<span
-											class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
-											>location_city</span
+										<a
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center block"
+											href="https://medibot.yudhna.id.vn/"
+											target="_blank"
+											rel="noopener noreferrer"
+											data-umami-event="project_live_click"
+											data-umami-event-project="medibot"
 										>
-									</div>
-									<div class="p-6 flex flex-col flex-grow">
-										<div class="mb-3">
-											<h3 class="text-xl font-bold">
-												<a
-													class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
-													href="https://github.com/dinhduongdev/Open-Terra"
-													target="_blank"
-													rel="noopener noreferrer"
-													data-umami-event="project_repo_click"
-													data-umami-event-project="open-terra"
+											<img
+												src="static/img/medibot.png"
+												alt="Medibot Preview"
+												class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+												loading="lazy"
+											/>
+										</a>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3 class="text-xl font-bold">
+														<a
+															class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
+															href="https://medibot.yudhna.id.vn/"
+															target="_blank"
+															rel="noopener noreferrer"
+															data-umami-event="project_live_click"
+															data-umami-event-project="medibot"
+														>
+															Medibot
+														</a>
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-emerald-600 font-semibold"
+															>First Prize – Research Competition 2026</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/medibot-fe"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="medibot-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/medibot"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="medibot-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												AI medical consultation chatbot leveraging RAG over
+												verified healthcare literature. Features semantic search
+												comparing clinical terminology by semantic embeddings,
+												deep learning X-ray image classification, and live cloud
+												deployment.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FastAPI</span
 												>
-													Open-Terra
-												</a>
-											</h3>
-										</div>
-										<p
-											class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
-										>
-											Open-source smart city IoT platform with FIWARE
-											integration, real-time sensor data processing,
-											traffic/flood simulation, and interactive dashboards.
-										</p>
-										<div class="flex flex-wrap gap-2 mt-auto">
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>FastAPI</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>FIWARE</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Next.js</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>MQTT</span
-											>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>LangChain</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Computer Vision</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Next.js</span
+												>
+											</div>
 										</div>
 									</div>
-								</div>
 
-								<!-- Project 3: E-Course LMS -->
-								<div
-									class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-								>
+									<!-- Project 3: Macro Mate -->
 									<div
-										class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
 									>
-										<span
-											class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
-											>school</span
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
 										>
-									</div>
-									<div class="p-6 flex flex-col flex-grow">
-										<div class="mb-3">
-											<h3 class="text-xl font-bold">
-												<a
-													class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
-													href="https://github.com/yudhnaa/OU_E-Course_FE"
-													target="_blank"
-													rel="noopener noreferrer"
-													data-umami-event="project_repo_click"
-													data-umami-event-project="e-course-fe"
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-50"
+												>nutrition</span
+											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														Macro Mate
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-emerald-600 font-semibold"
+															>First Prize – Open-Source Competition 2025</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/macro-mate"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="macro-mate"
+															>
+																Repository
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Award-winning open-source AI nutrition platform with
+												computer vision food image recognition for automatic
+												calorie and macronutrient estimation, AI-generated meal
+												planning, and PostgreSQL storage.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FastAPI</span
 												>
-													E-Course LMS
-												</a>
-											</h3>
-											<a
-												class="text-xs text-slate-500 hover:text-primary transition-colors"
-												href="https://github.com/yudhnaa/OU_E-Course_BE"
-												target="_blank"
-												rel="noopener noreferrer"
-												data-umami-event="project_repo_click"
-												data-umami-event-project="e-course-be"
-											>
-												Backend Repo
-											</a>
-										</div>
-										<p
-											class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
-										>
-											Comprehensive LMS with multi-role authentication, course
-											management, video lessons, automated assessments, Stripe
-											payments, and certificate generation.
-										</p>
-										<div class="flex flex-wrap gap-2 mt-auto">
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Spring MVC</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>React</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>MySQL</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Stripe</span
-											>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>PostgreSQL</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>LangChain</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Next.js</span
+												>
+											</div>
 										</div>
 									</div>
-								</div>
 
-								<!-- Project 4: FoodAppOu -->
-								<div
-									class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-								>
+									<!-- Project 4: E-Course LMS -->
 									<div
-										class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
 									>
-										<span
-											class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
-											>restaurant</span
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
 										>
-									</div>
-									<div class="p-6 flex flex-col flex-grow">
-										<div class="mb-3">
-											<h3 class="text-xl font-bold">
-												<a
-													class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
-													href="https://github.com/yudhnaa/OU_FoodApp_FE"
-													target="_blank"
-													rel="noopener noreferrer"
-													data-umami-event="project_repo_click"
-													data-umami-event-project="foodapp-fe"
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>school</span
+											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														E-Course LMS
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Learning Management System</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_E-Course_FE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="e-course-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_E-Course_BE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="e-course-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Online learning platform built with Spring Boot and
+												MySQL supporting RBAC, course lifecycle management,
+												Stripe Checkout with payment webhook verification, and
+												automated PDF certificate generation with Thymeleaf
+												&amp; Flying Saucer.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Spring Boot</span
 												>
-													FoodAppOu
-												</a>
-											</h3>
-											<a
-												class="text-xs text-slate-500 hover:text-primary transition-colors"
-												href="https://github.com/yudhnaa/OU_FoodApp_BE"
-												target="_blank"
-												rel="noopener noreferrer"
-												data-umami-event="project_repo_click"
-												data-umami-event-project="foodapp-be"
-											>
-												Backend Repo
-											</a>
-										</div>
-										<p
-											class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
-										>
-											Cross-platform food delivery app with restaurant browsing,
-											real-time order tracking, MoMo payment integration, and
-											revenue analytics.
-										</p>
-										<div class="flex flex-wrap gap-2 mt-auto">
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>React Native</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Django</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Firebase</span
-											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>MoMo</span
-											>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MySQL</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Stripe</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Thymeleaf</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Docker</span
+												>
+											</div>
 										</div>
 									</div>
-								</div>
 
-								<!-- Project 5: Clinic Management -->
-								<div
-									class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-								>
+									<!-- Project 5: Open-Terra -->
 									<div
-										class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
 									>
-										<span
-											class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
-											>local_hospital</span
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
 										>
-									</div>
-									<div class="p-6 flex flex-col flex-grow">
-										<div class="mb-3">
-											<h3 class="text-xl font-bold">
-												<a
-													class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
-													href="https://github.com/konnn04/CNPM_QuanLyPhongMach"
-													target="_blank"
-													rel="noopener noreferrer"
-													data-umami-event="project_repo_click"
-													data-umami-event-project="clinic-management"
-												>
-													Clinic Management
-												</a>
-											</h3>
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>location_city</span
+											>
 										</div>
-										<p
-											class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														Open-Terra
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Smart City IoT Platform</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/dinhduongdev/Open-Terra"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="open-terra"
+															>
+																Repository
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Open-source smart city IoT platform with FIWARE
+												integration, real-time sensor data processing,
+												traffic/flood simulation, and interactive dashboards.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FastAPI</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FIWARE</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Next.js</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MQTT</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 6: FoodAppOu -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+									>
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
 										>
-											Healthcare management system with appointment scheduling,
-											patient records, billing with MoMo payments, and SMS OTP
-											verification.
-										</p>
-										<div class="flex flex-wrap gap-2 mt-auto">
 											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Flask</span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>restaurant</span
 											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														FoodAppOu
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Food Delivery Application</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_FoodApp_FE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="foodapp-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_FoodApp_BE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="foodapp-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Cross-platform food delivery app with restaurant
+												browsing, real-time order tracking, MoMo payment
+												integration, and revenue analytics.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>React Native</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Django</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Firebase</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MoMo</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 7: Clinic Management -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+									>
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										>
 											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>SQLAlchemy</span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>local_hospital</span
 											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>Twilio</span
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														Clinic Management
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Healthcare Management System</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/konnn04/CNPM_QuanLyPhongMach"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="clinic-management"
+															>
+																Repository
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
 											>
-											<span
-												class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
-												>MoMo</span
-											>
+												Healthcare management system with appointment
+												scheduling, patient records, billing with MoMo payments,
+												and SMS OTP verification.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Flask</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>SQLAlchemy</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Twilio</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MoMo</span
+												>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -836,32 +1480,73 @@
 				<!-- Contact Section -->
 				<section
 					class="w-full bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pt-24 pb-12 px-6"
+					id="contact"
 				>
 					<div class="max-w-[960px] mx-auto">
-						<div class="text-center mb-16">
+						<div class="text-center mb-12">
 							<h2
 								class="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-6"
 							>
 								Let's work together
 							</h2>
 							<p
-								class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
+								class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-8"
 							>
-								I'm actively seeking software engineering opportunities. Whether
-								you have a question or just want to say hi, I'll try my best to
-								get back to you!
+								I'm actively seeking Software Engineer &amp; Backend Developer
+								opportunities. Whether you have an engineering role, a technical
+								inquiry, or want to connect, feel free to reach out!
 							</p>
+							<div class="flex flex-wrap justify-center items-center gap-4">
+								<a
+									class="flex items-center gap-2 px-5 py-3 rounded-lg bg-primary text-white font-medium hover:bg-primary-dark transition-all shadow-md shadow-primary/20 text-sm"
+									href="mailto:hoanganhduy.yudhna@gmail.com"
+									data-umami-event="contact_email_click"
+								>
+									<span class="material-symbols-outlined text-xl"
+										>alternate_email</span
+									>
+									<span>hoanganhduy.yudhna@gmail.com</span>
+								</a>
+								<a
+									class="flex items-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700 text-sm"
+									href="tel:+84344778045"
+									data-umami-event="contact_phone_click"
+								>
+									<span class="material-symbols-outlined text-xl">call</span>
+									<span>+84 344 778 045</span>
+								</a>
+								<a
+									class="flex items-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700 text-sm"
+									href="https://linkedin.com/in/2004anhduy"
+									target="_blank"
+									rel="noopener noreferrer"
+									data-umami-event="contact_linkedin_click"
+								>
+									<span class="material-symbols-outlined text-xl">work</span>
+									<span>LinkedIn</span>
+								</a>
+								<a
+									class="flex items-center gap-2 px-5 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700 text-sm"
+									href="https://github.com/yudhnaa"
+									target="_blank"
+									rel="noopener noreferrer"
+									data-umami-event="contact_github_click"
+								>
+									<span class="material-symbols-outlined text-xl">code</span>
+									<span>GitHub</span>
+								</a>
+							</div>
 						</div>
 						<div class="w-full h-px bg-slate-100 dark:bg-slate-800 mb-10"></div>
 						<div
 							class="flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 dark:text-slate-500 text-sm"
 						>
-							<p>© 2026 Hoang Anh Duy. All rights reserved.</p>
+							<p>© 2026 Duy Hoang Anh. All rights reserved.</p>
 							<div class="flex items-center gap-2">
 								<span class="material-symbols-outlined text-lg text-primary/80"
 									>location_on</span
 								>
-								<span>Ho Chi Minh City, Vietnam</span>
+								<span>Ho Chi Minh City, VN</span>
 							</div>
 						</div>
 					</div>

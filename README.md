@@ -1,11 +1,11 @@
-# Hoang Anh Duy's Portfolio Website
+# Duy Hoang Anh's Portfolio Website
 
-A professional portfolio website showcasing my journey as a Computer Science student and aspiring Software Engineer. Built with modern HTML5, CSS3, and JavaScript to demonstrate technical skills and academic projects.
+Computer Science graduate from Ho Chi Minh Open University, ranked top of the graduating class. Passionate about backend development, with hands-on experience building reliable systems and AI-powered applications. Experienced in Java and Python, working on authentication, payment workflows, asynchronous processing, data collection, RAG, and external API integration.
 
 ## Skills & Technologies
 
 <p align="center">
-    <img src="https://skillicons.dev/icons?i=html,css,js,git,github&theme=light" />
+    <img src="https://skillicons.dev/icons?i=python,java,spring,django,fastapi,postgres,mysql,rabbitmq,docker,githubactions,nextjs,react,tailwind&theme=light" />
 </p>
 
 <p align="center">
@@ -15,36 +15,26 @@ A professional portfolio website showcasing my journey as a Computer Science stu
     <a href="https://github.com/yudhnaa/portfolio">
         <img src="https://img.shields.io/badge/responsive-design-blue" alt="Responsive Design">
     </a>
-    <a href="https://github.com/yudhnaa/portfolio">
-        <img src="https://img.shields.io/badge/academic-portfolio-orange" alt="Academic Portfolio">
+    <a href="https://portfolio.yudhna.id.vn">
+        <img src="https://img.shields.io/badge/live-portfolio.yudhna.id.vn-blueviolet" alt="Live Site">
     </a>
 </p>
 
-## Features
+## Featured Projects
 
-- **Responsive Design**: Works perfectly on all devices (desktop, tablet, mobile)
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Interactive Elements**: Hover effects, smooth scrolling, and dynamic content
-- **Contact Form**: Functional contact form with validation
-- **Performance Optimized**: Fast loading with optimized assets
-- **Academic Focus**: Tailored for internship and entry-level opportunities
+- **Personal Tracker**: Distributed personal productivity backend built with Java 21, Spring Boot, PostgreSQL, and RabbitMQ implementing the Transactional Outbox pattern, RS256 JWT auth architecture with JWKS verification, and Java 2D dynamic wallpaper generation.
+- **Medibot**: AI-powered healthcare consultation chatbot (First Prize, Student Scientific Research Competition 2026) leveraging RAG, semantic embeddings search, and deep learning X-ray image classification.
+- **Macro Mate**: Award-winning open-source AI nutrition platform (First Prize, Open-Source Competition 2025) with food image recognition for automatic calorie tracking, AI meal plans, and PostgreSQL storage.
+- **E-Course LMS**: Online learning platform built with Spring Boot and MySQL featuring RBAC, course lifecycle management, Stripe Checkout with payment webhook verification, and automated PDF certificate generation with Thymeleaf & Flying Saucer.
 
 ## Sections
 
-- **Home**: Personal introduction and career objectives
-- **Experience**: Education background and relevant experience
-- **Achievements**: Honors, awards, and certifications
-- **Projects**: Academic and personal coding projects
-- **Skills**: Technical abilities with animated progress bars
-- **Contact**: Professional contact information and inquiry form
-
-## Technologies Used
-
-- **HTML5**: Semantic markup and accessibility features
-- **CSS3**: Modern styling with Flexbox, Grid, and animations
-- **JavaScript**: Interactive functionality and smooth user experience
-- **Font Awesome**: Professional icons
-- **Google Fonts**: Typography with Inter font family
+- **About**: Professional summary, dual-track resume download, and verified contact channels.
+- **Experience**: Detailed contributions as Python Developer Intern at Golden Owl Solutions.
+- **Education & Honors**: Academic background (B.S. in Computer Science, GPA: 3.81 / 4.0), competition championships, and multi-year scholarships.
+- **Skills**: Categorized proficiency covering Languages, Backend & Architecture, Databases, DevOps & OS, AI Tools, and Frontend.
+- **Projects**: Interactive carousel of featured backend, microservices, and AI projects.
+- **Contact**: Direct communication links (Email, Phone, LinkedIn, GitHub).
 
 ## Installation
 
@@ -53,40 +43,9 @@ Clone and run the portfolio locally:
 ```bash
 git clone https://github.com/yudhnaa/portfolio.git
 cd portfolio
-# Open index.html in your browser or serve with any HTTP server
+# Open index.html in your browser or serve with any HTTP server (e.g., npx serve .)
 ```
-
-## Design Features
-
-- Gradient color schemes
-- Interactive timeline for education/experience
-- Animated skill progress bars
-- Project showcase cards
-- Mobile-friendly navigation
-- Scroll-to-top functionality
-- Loading animations
-
-### Responsive Breakpoints
-
-- Desktop: 1200px and above
-- Tablet: 768px to 1199px
-- Mobile: Below 768px
-
-## Acknowledgements
-
-- [Font Awesome](https://fontawesome.com/) - Professional icons
-- [Google Fonts](https://fonts.google.com/) - Typography
-- [Skillicons](https://skillicons.dev/) - Technology icons
-
-## Contributing
-
-Contributions are always welcome! If you have suggestions for improvements or find any issues:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
 
 ## License
 
-© 2024 Hoang Anh Duy. All rights reserved.
+© 2026 Duy Hoang Anh. All rights reserved.

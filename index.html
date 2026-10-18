@@ -19,7 +19,7 @@
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -37,59 +37,71 @@
 	</head>
 
 	<body
-		class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 font-display antialiased selection:bg-primary/20 selection:text-primary"
+		class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-primary/20 selection:text-primary"
 	>
+		<!-- Atmospheric Noise Overlay (Mash Loop Pattern) -->
+		<div class="field-noise" aria-hidden="true"></div>
+
 		<div class="relative flex flex-col min-h-screen w-full overflow-x-hidden">
-			<!-- Header -->
+			<!-- Header (Mash Loop Pattern) -->
 			<header
-				class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-background-dark/80 border-b border-slate-200 dark:border-slate-800"
+				class="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/75 dark:bg-[#0c0a10]/80 border-b border-slate-200/80 dark:border-white/[0.08]"
 			>
-				<div class="max-w-[1100px] mx-auto px-6 lg:px-8">
-					<div class="flex items-center justify-between h-16">
-						<div class="flex items-center gap-2 p-2 rounded-lg">
-							<h1
-								class="text-xl font-bold tracking-tight text-primary dark:text-white"
-							>
-								yudhna's portfolio
-							</h1>
-						</div>
-						<nav class="hidden md:flex items-center gap-8">
+				<div class="max-w-[1200px] mx-auto px-4 lg:px-8">
+					<div class="flex items-center justify-between h-16 gap-4">
+						<!-- Brand -->
+						<div class="flex items-center gap-2">
 							<a
-								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								href="#about"
+								class="inline-flex items-center gap-2 text-slate-900 dark:text-white font-display font-bold text-base tracking-tight hover:text-primary transition-colors"
+							>
+								<span
+									class="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_12px_rgba(44,90,160,0.5)]"
+								></span>
+								<span>yudhna</span>
+							</a>
+						</div>
+
+						<!-- Nav links -->
+						<nav class="hidden md:flex items-center gap-6">
+							<a
+								class="text-xs font-mono tracking-wider uppercase text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
 								href="#about"
 								>About</a
 							>
 							<a
-								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								class="text-xs font-mono tracking-wider uppercase text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
 								href="#experience"
 								>Experience</a
 							>
 							<a
-								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								class="text-xs font-mono tracking-wider uppercase text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
 								href="#achievements"
-								>Achievements</a
+								>Honors</a
 							>
 							<a
-								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								class="text-xs font-mono tracking-wider uppercase text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
 								href="#skills"
 								>Skills</a
 							>
 							<a
-								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								class="text-xs font-mono tracking-wider uppercase text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
 								href="#projects"
 								>Projects</a
 							>
 							<a
-								class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
+								class="text-xs font-mono tracking-wider uppercase text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors"
 								href="#contact"
 								>Contact</a
 							>
 						</nav>
-						<div class="flex items-center gap-4">
+
+						<div class="flex items-center gap-3">
 							<button
-								class="md:hidden text-slate-600 dark:text-slate-300"
+								class="md:hidden text-slate-600 dark:text-slate-300 p-2"
 								id="mobileMenuBtn"
 								data-umami-event="mobile_menu_button_click"
+								aria-label="Toggle navigation menu"
 							>
 								<span class="material-symbols-outlined">menu</span>
 							</button>
@@ -99,64 +111,86 @@
 			</header>
 
 			<main class="flex-grow flex flex-col items-center">
-				<!-- Hero Section -->
+				<!-- Hero Section (Mash Loop Stage Pattern) -->
 				<section
-					class="w-full py-20 lg:py-32 px-6 bg-gradient-to-b from-white to-background-light dark:from-background-dark dark:to-background-dark border-b border-slate-200/60 dark:border-slate-800"
+					class="hero-stage w-full py-16 lg:py-28 px-6 border-b border-slate-200/60 dark:border-white/[0.08] relative"
 					id="about"
 				>
-					<div class="max-w-[960px] mx-auto">
+					<!-- Radial Ambient Glow -->
+					<div
+						class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-primary/10 dark:bg-primary/[0.06] rounded-full blur-[140px] pointer-events-none -z-10"
+					></div>
+
+					<div class="max-w-[1100px] mx-auto relative z-10">
+						<!-- Stage Corner Readouts (Instrument Metadata) -->
 						<div
-							class="flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 items-center"
+							class="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-slate-200/60 dark:border-white/[0.06]"
+						>
+							<p class="readout">
+								<span
+									class="w-2 h-2 rounded-full bg-emerald-400 beacon-dot"
+								></span>
+								<b>STATUS</b> // OPEN TO WORK · 2026 VALEDICTORIAN
+							</p>
+						</div>
+
+						<div
+							class="flex flex-col-reverse lg:flex-row gap-12 lg:gap-16 items-center"
 						>
 							<div class="flex-1 flex flex-col gap-6 text-center lg:text-left">
 								<div class="space-y-4">
-									<span
-										class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full"
+									<div
+										class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 dark:bg-primary/[0.08] border border-primary/20 dark:border-primary/20"
 									>
-										Software Engineer
-									</span>
+										<span class="material-symbols-outlined text-sm text-primary"
+											>verified</span
+										>
+										<span
+											class="font-mono text-xs uppercase tracking-wider text-primary font-semibold"
+										>
+											TOP OF GRADUATING CLASS – CS 2026
+										</span>
+									</div>
 									<h1
-										class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white leading-[1.15] tracking-tight"
+										class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-[1.1] tracking-tight"
 									>
-										Hi, I'm Duy
+										Duy Hoang Anh
 									</h1>
 									<p
-										class="text-base lg:text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-justify"
+										class="font-mono text-sm tracking-wide text-primary font-medium"
+									>
+										Backend Software Engineer &amp; Applied AI Developer
+									</p>
+									<p
+										class="text-base lg:text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-justify"
 									>
 										Computer Science graduate from Ho Chi Minh Open University,
-										<strong
-											class="font-semibold text-slate-800 dark:text-slate-200"
+										<strong class="font-semibold text-slate-900 dark:text-white"
 											>ranked top of the graduating class</strong
 										>. Passionate about
-										<strong
-											class="font-semibold text-slate-800 dark:text-slate-200"
+										<strong class="font-semibold text-slate-900 dark:text-white"
 											>backend development</strong
 										>, with hands-on experience building reliable systems and
 										AI-powered applications.
 									</p>
 									<p
-										class="text-base lg:text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-justify"
+										class="text-base lg:text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-justify"
 									>
 										Experienced in
-										<strong
-											class="font-semibold text-slate-800 dark:text-slate-200"
+										<strong class="font-semibold text-slate-900 dark:text-white"
 											>Java</strong
 										>
 										and
-										<strong
-											class="font-semibold text-slate-800 dark:text-slate-200"
+										<strong class="font-semibold text-slate-900 dark:text-white"
 											>Python</strong
 										>, working on authentication,
-										<strong
-											class="font-semibold text-slate-800 dark:text-slate-200"
+										<strong class="font-semibold text-slate-900 dark:text-white"
 											>payment workflows</strong
 										>,
-										<strong
-											class="font-semibold text-slate-800 dark:text-slate-200"
+										<strong class="font-semibold text-slate-900 dark:text-white"
 											>asynchronous processing</strong
 										>, data collection,
-										<strong
-											class="font-semibold text-slate-800 dark:text-slate-200"
+										<strong class="font-semibold text-slate-900 dark:text-white"
 											>RAG</strong
 										>, and external API integration.
 									</p>
@@ -171,10 +205,13 @@
 										<button
 											id="resumeDropdownBtn"
 											type="button"
-											class="flex items-center justify-center gap-2 h-12 px-6 rounded-lg bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40"
+											class="flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-primary text-sm font-semibold hover:bg-primary-dark hover:text-white transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 text-white"
 											aria-expanded="false"
 											aria-haspopup="true"
 										>
+											<span class="material-symbols-outlined text-lg"
+												>description</span
+											>
 											<span>View Resume</span>
 											<span
 												class="material-symbols-outlined text-lg transition-transform duration-200"
@@ -184,111 +221,161 @@
 										</button>
 										<div
 											id="resumeDropdownMenu"
-											class="hidden absolute left-0 mt-2 w-64 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-xl z-30 py-2 divide-y divide-slate-100 dark:divide-slate-800"
+											class="hidden absolute left-0 mt-2 w-72 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 shadow-2xl z-30 py-2 divide-y divide-slate-100 dark:divide-white/[0.06]"
 										>
 											<a
-												class="flex flex-col px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-												href="https://drive.google.com/file/d/1AXolONUb5bktEMMGZB1CWUdH4Snm4pLc/view"
-												target="_blank"
-												rel="noopener noreferrer"
-												data-umami-event="hero_resume_python_click"
-											>
-												<span
-													class="text-sm font-semibold text-slate-900 dark:text-white"
-													>Python Backend &amp; AI</span
-												>
-												<span class="text-xs text-slate-500 dark:text-slate-400"
-													>Django, FastAPI, Celery, LangChain</span
-												>
-											</a>
-											<a
-												class="flex flex-col px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+												class="flex flex-col px-4 py-3 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors"
 												href="https://drive.google.com/file/d/1AXolONUb5bktEMMGZB1CWUdH4Snm4pLc/view"
 												target="_blank"
 												rel="noopener noreferrer"
 												data-umami-event="hero_resume_java_click"
 											>
 												<span
-													class="text-sm font-semibold text-slate-900 dark:text-white"
+													class="text-sm font-semibold text-slate-900 dark:text-white font-mono"
 													>Java Backend &amp; Microservices</span
 												>
-												<span class="text-xs text-slate-500 dark:text-slate-400"
-													>Java 21, Spring Boot, RabbitMQ, SQL</span
+											</a>
+											<a
+												class="flex flex-col px-4 py-3 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors"
+												href="https://drive.google.com/file/d/1vTV3uCW8jJ4N0xQRdfDzi3Ty1QIHaodQ/view"
+												target="_blank"
+												rel="noopener noreferrer"
+												data-umami-event="hero_resume_python_click"
+											>
+												<span
+													class="text-sm font-semibold text-slate-900 dark:text-white font-mono"
+													>Python Backend &amp; AI</span
 												>
 											</a>
 										</div>
 									</div>
 									<a
-										class="flex items-center justify-center h-12 px-6 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-base font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+										class="flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-all"
 										href="#projects"
 										data-umami-event="hero_view_projects_click"
 									>
-										View Projects
+										<span class="material-symbols-outlined text-lg"
+											>terminal</span
+										>
+										<span>Explore Projects</span>
 									</a>
 								</div>
 								<div
 									class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-500 dark:text-slate-400"
 								>
 									<a
-										class="hover:text-primary transition-colors flex items-center gap-1"
+										class="hover:text-primary transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider"
 										href="https://linkedin.com/in/2004anhduy"
 										target="_blank"
 										rel="noopener noreferrer"
 										data-umami-event="social_linkedin_click"
 									>
-										<span class="material-symbols-outlined text-2xl">work</span>
-										<span class="text-sm font-medium">LinkedIn</span>
+										<span class="material-symbols-outlined text-xl">work</span>
+										<span>LinkedIn</span>
 									</a>
 									<a
-										class="hover:text-primary transition-colors flex items-center gap-1"
+										class="hover:text-primary transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider"
 										href="https://github.com/yudhnaa"
 										target="_blank"
 										rel="noopener noreferrer"
 										data-umami-event="social_github_click"
 									>
-										<span class="material-symbols-outlined text-2xl">code</span>
-										<span class="text-sm font-medium">GitHub</span>
+										<span class="material-symbols-outlined text-xl">code</span>
+										<span>GitHub</span>
 									</a>
 									<a
-										class="hover:text-primary transition-colors flex items-center gap-1"
+										class="hover:text-primary transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider"
 										href="mailto:hoanganhduy.yudhna@gmail.com"
 										data-umami-event="social_email_click"
 									>
-										<span class="material-symbols-outlined text-2xl"
+										<span class="material-symbols-outlined text-xl"
 											>alternate_email</span
 										>
-										<span class="text-sm font-medium">Email</span>
+										<span>Email</span>
 									</a>
 									<a
-										class="hover:text-primary transition-colors flex items-center gap-1"
+										class="hover:text-primary transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider"
 										href="tel:+84344778045"
 										data-umami-event="social_phone_click"
 									>
-										<span class="material-symbols-outlined text-2xl">call</span>
-										<span class="text-sm font-medium">+84 344 778 045</span>
+										<span class="material-symbols-outlined text-xl">call</span>
+										<span>+84 344 778 045</span>
 									</a>
 								</div>
 								<div
-									class="pt-2 flex items-center justify-center lg:justify-start gap-2 text-slate-600 dark:text-slate-400"
+									class="pt-1 flex items-center justify-center lg:justify-start gap-2 text-slate-500 dark:text-slate-400 font-mono text-xs"
 								>
-									<span class="material-symbols-outlined text-[18px]"
+									<span
+										class="material-symbols-outlined text-[16px] text-primary"
 										>location_on</span
 									>
-									<span class="text-sm font-medium">Ho Chi Minh City, VN</span>
+									<span>Ho Chi Minh City, VN</span>
 								</div>
 							</div>
-							<div class="relative w-full max-w-[400px] lg:max-w-[420px]">
+							<!-- Right Column: Interactive System Topology Console -->
+							<div
+								class="relative w-full max-w-[420px] lg:max-w-[440px] flex flex-col items-center"
+							>
+								<!-- Atmospheric Glow behind Console -->
 								<div
-									class="absolute inset-0 bg-primary/20 dark:bg-primary/10 rounded-2xl rotate-3 scale-[1.02]"
+									class="absolute -inset-4 rounded-3xl bg-primary/15 blur-2xl -z-10"
 								></div>
 								<div
-									class="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-200 shadow-2xl ring-1 ring-slate-900/5 dark:ring-white/10"
+									class="w-full rounded-3xl bg-white/80 dark:bg-surface-dark-card border border-slate-200/90 dark:border-white/10 shadow-2xl p-4 relative overflow-hidden backdrop-blur-xl craft-card"
 								>
-									<img
-										alt="Portrait of Hoang Anh Duy"
-										class="w-full h-full object-cover"
-										src="static/img/avatar.jpeg"
-									/>
+									<!-- Console Header Bar -->
+									<div
+										class="flex items-center justify-between gap-2 pb-3 mb-2 border-b border-slate-200/60 dark:border-white/[0.08] font-mono text-[11px]"
+									>
+										<div class="flex items-center gap-2 shrink-0">
+											<span
+												class="w-2 h-2 rounded-full bg-emerald-400 beacon-dot"
+											></span>
+											<span class="text-slate-900 dark:text-white font-semibold"
+												>SYSTEM TOPOLOGY</span
+											>
+										</div>
+										<!-- Segmented Mode Switcher -->
+										<div
+											class="inline-grid seg mode"
+											role="radiogroup"
+											aria-label="Topology Filter"
+										>
+											<span
+												class="seg__ind"
+												id="segIndicator"
+												aria-hidden="true"
+											></span>
+											<button type="button" class="on" data-stack="all">
+												Tất cả
+											</button>
+											<button type="button" data-stack="java">Java</button>
+											<button type="button" data-stack="python">Python</button>
+										</div>
+									</div>
+
+									<!-- Interactive Canvas Container with Centered Avatar -->
+									<div
+										class="relative w-full h-[320px] sm:h-[340px] rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#08060b] border border-slate-200/60 dark:border-white/[0.04] flex items-center justify-center"
+									>
+										<!-- Dedicated Canvas -->
+										<canvas
+											id="meshCanvas"
+											class="absolute inset-0 w-full h-full cursor-crosshair"
+										></canvas>
+
+										<!-- Center Core Engineer Avatar Node -->
+										<div
+											class="relative z-10 w-20 h-20 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-primary via-blue-600 to-indigo-600 shadow-[0_0_24px_rgba(44,90,160,0.45)] group cursor-pointer"
+											title="Duy Hoang Anh · Core Engineer"
+										>
+											<img
+												src="static/img/avatar.jpeg"
+												alt="Duy Hoang Anh"
+												class="w-full h-full object-cover rounded-full"
+											/>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -303,9 +390,9 @@
 					<div class="max-w-[960px] mx-auto">
 						<div class="mb-12">
 							<h2
-								class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
+								class="font-display text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
 							>
-								Experience & Education
+								Experience &amp; Education
 							</h2>
 							<p class="mt-2 text-slate-600 dark:text-slate-400">
 								My professional journey and academic milestones.
@@ -578,7 +665,7 @@
 					<div class="max-w-[960px] mx-auto">
 						<div class="text-center mb-12">
 							<h2
-								class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
+								class="font-display text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
 							>
 								Technical Proficiency
 							</h2>
@@ -592,12 +679,13 @@
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 							<!-- Java Backend Stack -->
 							<div
-								class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between"
+								id="skill-card-java"
+								class="craft-card bg-background-light dark:bg-surface-dark-card p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between transition-all"
 							>
 								<div>
 									<div class="mb-4">
 										<h3
-											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2"
+											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2 font-mono"
 										>
 											<span class="material-symbols-outlined text-lg">dns</span>
 											Java Backend Stack
@@ -607,41 +695,41 @@
 										<!-- Row 1: Language & Core Frameworks -->
 										<div class="flex flex-wrap items-center gap-2">
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
 												>Java 21</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
 												>Spring Ecosystem (Boot, Security, JPA)</span
 											>
 										</div>
 										<!-- Row 2: Secondary Frameworks, Messaging, Auth & Protocols -->
 										<div class="flex flex-wrap items-center gap-2">
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>RESTful APIs</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>RabbitMQ</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>RS256 JWT</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>Thymeleaf</span
 											>
 										</div>
 										<!-- Row 3: Databases -->
 										<div class="flex flex-wrap items-center gap-2">
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>PostgreSQL</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>MySQL</span
 											>
 										</div>
@@ -651,12 +739,13 @@
 
 							<!-- Python & AI Stack -->
 							<div
-								class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col justify-between"
+								id="skill-card-python"
+								class="craft-card bg-background-light dark:bg-surface-dark-card p-6 rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between transition-all"
 							>
 								<div>
 									<div class="mb-4">
 										<h3
-											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2"
+											class="text-sm font-bold uppercase tracking-wider text-primary flex items-center gap-2 font-mono"
 										>
 											<span class="material-symbols-outlined text-lg"
 												>terminal</span
@@ -668,45 +757,45 @@
 										<!-- Row 1: Language & Core Frameworks -->
 										<div class="flex flex-wrap items-center gap-2">
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
 												>Python</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
 												>Django</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-200 text-xs font-semibold"
 												>FastAPI</span
 											>
 										</div>
 										<!-- Row 2: Secondary Frameworks, AI & Protocols -->
 										<div class="flex flex-wrap items-center gap-2">
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>RESTful APIs</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>RAG</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>LangChain</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>LangGraph</span
 											>
 										</div>
 										<!-- Row 3: Databases -->
 										<div class="flex flex-wrap items-center gap-2">
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>PostgreSQL</span
 											>
 											<span
-												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium"
+												class="px-3 py-1.5 rounded-lg bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-medium"
 												>MySQL</span
 											>
 										</div>
@@ -849,7 +938,7 @@
 						>
 							<div>
 								<h2
-									class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
+									class="font-display text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
 								>
 									Featured Projects
 								</h2>
@@ -895,7 +984,7 @@
 								<div class="flex gap-6 w-max px-1" id="projectsTrack">
 									<!-- Project 1: Personal Tracker (Flagship Microservices) -->
 									<div
-										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
 									>
 										<a
 											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center block"
@@ -998,7 +1087,7 @@
 
 									<!-- Project 2: Medibot (Flagship AI & Research 1st Prize) -->
 									<div
-										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
 									>
 										<a
 											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center block"
@@ -1096,7 +1185,7 @@
 
 									<!-- Project 3: Macro Mate -->
 									<div
-										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
 									>
 										<div
 											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
@@ -1166,7 +1255,7 @@
 
 									<!-- Project 4: E-Course LMS -->
 									<div
-										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
 									>
 										<div
 											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
@@ -1254,7 +1343,7 @@
 
 									<!-- Project 5: Open-Terra -->
 									<div
-										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
 									>
 										<div
 											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
@@ -1323,7 +1412,7 @@
 
 									<!-- Project 6: FoodAppOu -->
 									<div
-										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
 									>
 										<div
 											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
@@ -1405,7 +1494,7 @@
 
 									<!-- Project 7: Clinic Management -->
 									<div
-										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
 									>
 										<div
 											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
@@ -1485,7 +1574,7 @@
 					<div class="max-w-[960px] mx-auto">
 						<div class="text-center mb-12">
 							<h2
-								class="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-6"
+								class="font-display text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-6"
 							>
 								Let's work together
 							</h2>

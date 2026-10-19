@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Duy Hoang Anh - Software Engineer Portfolio",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node watch.js"
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "backend"
+  ],
+  "author": "Duy Hoang Anh",
+  "license": "MIT"
+}

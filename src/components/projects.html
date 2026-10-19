@@ -1,0 +1,638 @@
+<!-- Projects Section -->
+				<section
+					class="w-full py-20 px-6 bg-background-light dark:bg-background-dark overflow-hidden"
+					id="projects"
+				>
+					<div class="max-w-[960px] mx-auto">
+						<div
+							class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
+						>
+							<div>
+								<h2
+									class="font-display text-3xl font-bold text-slate-900 dark:text-white tracking-tight"
+								>
+									Featured Projects
+								</h2>
+								<p class="mt-2 text-slate-600 dark:text-slate-400">
+									Some of the projects I've built to solve real problems.
+								</p>
+							</div>
+							<a
+								class="text-primary font-medium hover:text-primary-dark inline-flex items-center gap-1 group"
+								href="https://github.com/yudhnaa"
+								target="_blank"
+								rel="noopener noreferrer"
+								data-umami-event="projects_view_all_github_click"
+							>
+								View Github
+								<span
+									class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform"
+									>arrow_forward</span
+								>
+							</a>
+						</div>
+						<div class="relative">
+							<button
+								class="absolute left-2 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/95 dark:bg-surface-dark/95 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 shadow-md hover:text-primary hover:shadow-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center"
+								id="projectsScrollPrev"
+								type="button"
+								aria-label="Scroll projects left"
+							>
+								<span class="material-symbols-outlined">chevron_left</span>
+							</button>
+							<button
+								class="absolute right-2 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/95 dark:bg-surface-dark/95 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 shadow-md hover:text-primary hover:shadow-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center"
+								id="projectsScrollNext"
+								type="button"
+								aria-label="Scroll projects right"
+							>
+								<span class="material-symbols-outlined">chevron_right</span>
+							</button>
+							<div
+								class="relative w-full overflow-x-auto no-scrollbar snap-x snap-mandatory pb-8"
+								id="projectsScroller"
+							>
+								<div class="flex gap-6 w-max px-1" id="projectsTrack">
+									<!-- Project 1: Personal Tracker (Flagship Microservices) -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
+									>
+										<a
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center block"
+											href="https://per-tracker.yudhna.id.vn/"
+											target="_blank"
+											rel="noopener noreferrer"
+											data-umami-event="project_live_click"
+											data-umami-event-project="personal-tracker"
+										>
+											<img
+												src="static/img/personal-tracker.png"
+												alt="Personal Tracker Preview"
+												class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+												loading="lazy"
+											/>
+										</a>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3 class="text-xl font-bold">
+														<a
+															class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
+															href="https://per-tracker.yudhna.id.vn/"
+															target="_blank"
+															rel="noopener noreferrer"
+															data-umami-event="project_live_click"
+															data-umami-event-project="personal-tracker"
+														>
+															Personal Tracker
+														</a>
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Microservices Architecture</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/personal-tracker"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="personal-tracker-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/personal-tracker-backend"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="personal-tracker-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Distributed personal productivity backend built with
+												Java 21, Spring Boot, PostgreSQL, and RabbitMQ. Features
+												Transactional Outbox pattern for reliable asynchronous
+												messaging, RS256 JWT auth architecture with JWKS
+												verification, and a Java 2D dynamic wallpaper engine
+												with in-memory caching.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Java 21</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Spring Boot</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>RabbitMQ</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>PostgreSQL</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>RS256 JWT</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 2: Medibot (Flagship AI & Research 1st Prize) -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
+									>
+										<a
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center block"
+											href="https://medibot.yudhna.id.vn/"
+											target="_blank"
+											rel="noopener noreferrer"
+											data-umami-event="project_live_click"
+											data-umami-event-project="medibot"
+										>
+											<img
+												src="static/img/medibot.png"
+												alt="Medibot Preview"
+												class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+												loading="lazy"
+											/>
+										</a>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3 class="text-xl font-bold">
+														<a
+															class="text-slate-900 dark:text-white group-hover:text-primary transition-colors"
+															href="https://medibot.yudhna.id.vn/"
+															target="_blank"
+															rel="noopener noreferrer"
+															data-umami-event="project_live_click"
+															data-umami-event-project="medibot"
+														>
+															Medibot
+														</a>
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-emerald-600 font-semibold"
+															>First Prize – Research Competition 2026</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/medibot-fe"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="medibot-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/medibot"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="medibot-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												AI medical consultation chatbot leveraging RAG over
+												verified healthcare literature. Features semantic search
+												comparing clinical terminology by semantic embeddings,
+												deep learning X-ray image classification, and live cloud
+												deployment.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FastAPI</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>LangChain</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Computer Vision</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Next.js</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 3: Macro Mate -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
+									>
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										>
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-50"
+												>nutrition</span
+											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														Macro Mate
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-emerald-600 font-semibold"
+															>First Prize – Open-Source Competition 2025</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/macro-mate"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="macro-mate"
+															>
+																Repository
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Award-winning open-source AI nutrition platform with
+												computer vision food image recognition for automatic
+												calorie and macronutrient estimation, AI-generated meal
+												planning, and PostgreSQL storage.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FastAPI</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>PostgreSQL</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>LangChain</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Next.js</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 4: E-Course LMS -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
+									>
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										>
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>school</span
+											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														E-Course LMS
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Learning Management System</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_E-Course_FE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="e-course-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_E-Course_BE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="e-course-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Online learning platform built with Spring Boot and
+												MySQL supporting RBAC, course lifecycle management,
+												Stripe Checkout with payment webhook verification, and
+												automated PDF certificate generation with Thymeleaf
+												&amp; Flying Saucer.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Spring Boot</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MySQL</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Stripe</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Thymeleaf</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Docker</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 5: Open-Terra -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
+									>
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										>
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>location_city</span
+											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														Open-Terra
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Smart City IoT Platform</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/dinhduongdev/Open-Terra"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="open-terra"
+															>
+																Repository
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Open-source smart city IoT platform with FIWARE
+												integration, real-time sensor data processing,
+												traffic/flood simulation, and interactive dashboards.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FastAPI</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>FIWARE</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Next.js</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MQTT</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 6: FoodAppOu -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
+									>
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										>
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>restaurant</span
+											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														FoodAppOu
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Food Delivery Application</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_FoodApp_FE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="foodapp-frontend"
+															>
+																Frontend
+															</a>
+															<span class="text-slate-300 dark:text-slate-600"
+																>•</span
+															>
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/yudhnaa/OU_FoodApp_BE"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="foodapp-backend"
+															>
+																Backend
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Cross-platform food delivery app with restaurant
+												browsing, real-time order tracking, MoMo payment
+												integration, and revenue analytics.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>React Native</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Django</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Firebase</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MoMo</span
+												>
+											</div>
+										</div>
+									</div>
+
+									<!-- Project 7: Clinic Management -->
+									<div
+										class="snap-center shrink-0 w-[340px] md:w-[400px] group bg-white dark:bg-surface-dark-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-white/[0.08] shadow-sm hover:shadow-2xl craft-card transition-all duration-300 flex flex-col"
+									>
+										<div
+											class="h-52 overflow-hidden relative bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+										>
+											<span
+												class="material-symbols-outlined text-6xl text-slate-400 dark:text-slate-500"
+												>local_hospital</span
+											>
+										</div>
+										<div class="p-6 flex flex-col flex-grow">
+											<div class="mb-3">
+												<div>
+													<h3
+														class="text-xl font-bold text-slate-900 dark:text-white"
+													>
+														Clinic Management
+													</h3>
+													<div
+														class="flex flex-wrap items-center justify-between gap-1 mt-1"
+													>
+														<span class="text-xs text-primary font-semibold"
+															>Healthcare Management System</span
+														>
+														<div class="flex items-center gap-2 text-xs">
+															<a
+																class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2"
+																href="https://github.com/konnn04/CNPM_QuanLyPhongMach"
+																target="_blank"
+																rel="noopener noreferrer"
+																data-umami-event="project_repo_click"
+																data-umami-event-project="clinic-management"
+															>
+																Repository
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<p
+												class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-grow leading-relaxed"
+											>
+												Healthcare management system with appointment
+												scheduling, patient records, billing with MoMo payments,
+												and SMS OTP verification.
+											</p>
+											<div class="flex flex-wrap gap-2 mt-auto">
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Flask</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>SQLAlchemy</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>Twilio</span
+												>
+												<span
+													class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold"
+													>MoMo</span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
